@@ -3,6 +3,7 @@ __author__ = '朱永刚'
 '''
 
 class Student(object):
+
     count = 0
 
     def __init__(self, name):
@@ -38,33 +39,28 @@ b.print_count()'''
 3) 创建游戏对象，开始游戏
 """
 
-class Game(object):
 
+class Game(object):
     top_score = 0
 
     @staticmethod
     def show_help():
-
         print('帮助信息请访问www.baidu.com')
 
     @classmethod
     def show_top_score(cls):
+        print('当前最高分是%d!' % cls.top_score)
 
-        print('当前最高分是%d!'%cls.top_score)
-
-    def __init__(self,player_name):
-
+    def __init__(self, player_name):
         self.player_name = player_name
 
     def start_game(self):
-
-        print('%s开始游戏。'%self.player_name)
+        print('%s开始游戏。' % self.player_name)
         # 修改最高分
         Game.top_score = 999
 
 
 if __name__ == '__main__':
-
     # 查看游戏帮助
     Game.show_help()
     # 查看最高分
@@ -72,5 +68,5 @@ if __name__ == '__main__':
     # 创建游戏对象，开始游戏
     game = Game('小明')
     game.start_game()
-    #游戏结束，查看最高分
+    # 游戏结束，查看最高分
     Game.show_top_score()

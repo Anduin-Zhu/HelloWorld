@@ -4,12 +4,11 @@
 
 row = 1
 while row <= 5:
-    #设置一个计数器
+    # 设置一个计数器
     col = 1
-    #while条件
+    # while条件
     while col <= row:
-
-        print("*",end="")
+        print("*", end="")
 
         col += 1
     print("")

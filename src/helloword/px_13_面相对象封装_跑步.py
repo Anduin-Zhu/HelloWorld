@@ -1,15 +1,15 @@
 # -*- coding:utf-8 -*-
 __author__ = '朱永刚'
+
+
 class Person:
     """人类"""
 
     def __init__(self, name, weight):
-
         self.name = name
         self.weight = weight
 
     def __str__(self):
-
         return "我的名字叫 %s 体重 %.2f 公斤" % (self.name, self.weight)
 
     def run(self):
@@ -24,6 +24,7 @@ class Person:
         print("%s 是吃货，吃完这顿再减肥" % self.name)
         self.weight += 1
 
+
 xiaoming = Person("小明", 75)
 
 xiaoming.run()
@@ -32,7 +33,7 @@ xiaoming.eat()
 
 print(xiaoming)
 
-xiaomei = Person("小美",45)
+xiaomei = Person("小美", 45)
 
 xiaomei.run()
 xiaomei.eat()

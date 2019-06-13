@@ -13,13 +13,15 @@ for i in l:
         max = i
     elif i < min:
         min = i
-print(min,max)
+print(min, max)
+
 
 def fib(max):
-    n,a,b = 0,0,1
+    n, a, b = 0, 0, 1
     while n < max:
         print(b)
-        a,b = b,a + b
+        a, b = b, a + b
         n += 1
+
 
 fib(4)

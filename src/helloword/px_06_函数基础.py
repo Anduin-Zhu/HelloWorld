@@ -19,17 +19,15 @@ person('必须',1,2,3,moren='moren',mmgjz='命名关键字',a=1,b=2,c=3)
 '''
 
 
-
 def sum_numbers(*args):
     sum = 0
     for temp in args:
         sum += temp
-    return sum,temp
-
-print(type(sum_numbers(1,2,3)))
-print(sum_numbers(1,3,4,5))
+    return sum, temp
 
 
+print(type(sum_numbers(1, 2, 3)))
+print(sum_numbers(1, 3, 4, 5))
 
 '''
 def demo(num, num_list):
@@ -64,11 +62,12 @@ demo(glnum, gllist)
 print(glnum)
 print(gllist)'''
 
-def jiaohuan(a,b):
-    a,b = b,a
-    print(a,b)
+
+def jiaohuan(a, b):
+    a, b = b, a
+    print(a, b)
 
 
 a = 1
 b = 2
-jiaohuan(a,b)
+jiaohuan(a, b)
