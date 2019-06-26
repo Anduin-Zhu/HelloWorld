@@ -63,4 +63,38 @@ class Fib2(object):
             return L
 
 f = Fib2()
-print(f[23:55])
+print(f[3:5])
+
+# __call__
+
+class Student(object):
+
+    def __init__(self,name):
+        self.name = name
+
+    def __call__(self, *args, **kwargs):
+        print("我的名字是%s%s"%(self.name,args))
+
+
+s = Student('朱永刚')
+s()
+
+
+class Chain2(object):
+
+    def __init__(self, path=''):
+        self._path = path
+
+    def __getattr__(self, path):
+        return Chain2('%s/%s' % (self._path, path))
+
+    def __call__(self, path):
+        return Chain2('%s/%s' % (self._path, path))
+
+    def __str__(self):
+        return self._path
+
+    __repr__ = __str__
+
+
+print(Chain2().users('michael').repos)
