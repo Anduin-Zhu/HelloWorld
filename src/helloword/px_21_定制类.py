@@ -81,7 +81,9 @@ s()
 
 
 class Chain2(object):
-
+    """
+    实现链式调用
+    """
     def __init__(self, path=''):
         self._path = path
 

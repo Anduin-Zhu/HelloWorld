@@ -108,14 +108,15 @@ def primes():
         li = filter(not_divisible, li)
 
 
-'''
 for n in primes():
-    if n < 1000:
+    if n < 10:
         print(n)
     else:
         break
-    '''
 
+"""
+回数是指从左向右读和从右向左读都是一样的数，例如12321，909。请利用filter()筛选出回数
+"""
 
 # 生成器，全体自然数
 
@@ -154,6 +155,7 @@ L222 = [('Bob', 75), ('Adam', 92), ('Bart', 66), ('Lisa', 88)]
 
 
 def by_name(t):
+    # 按名字排序
     L333 = []
     name_dict = {}
     for i in dict(t).keys():
@@ -165,10 +167,12 @@ def by_name(t):
 
 
 def by_name2(t):
+    # 按名字排序
     return t[0]
 
 
 def by_score(t):
+    # 按成绩排序
     return t[1]
 
 
